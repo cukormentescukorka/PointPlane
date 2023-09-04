@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="152.14076mm"
+   height="63.179428mm"
+   viewBox="0 0 152.14076 63.179428"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="point_plane.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.47237515"
+     inkscape:cx="296.37461"
+     inkscape:cy="147.12882"
+     inkscape:window-width="1846"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient3067"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#ff4949;stop-opacity:1;"
+         offset="0"
+         id="stop3065" />
+    </linearGradient>
+    <rect
+       x="508.82117"
+       y="357.66187"
+       width="245.50632"
+       height="46.809036"
+       id="rect10326" />
+    <rect
+       x="78.181404"
+       y="308.4249"
+       width="645.65967"
+       height="141.68874"
+       id="rect4168" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter3629"
+       x="-0.26079224"
+       y="-0.27173559"
+       width="1.5215845"
+       height="1.5434712">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="7.41249"
+         id="feGaussianBlur3631" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter4343"
+       x="-0.31515287"
+       y="-0.31515287"
+       width="1.6303057"
+       height="1.6303057">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="2.5139439"
+         id="feGaussianBlur4345" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(12.517677,-41.117956)">
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text4166"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect4168);fill:#000000;fill-opacity:1;stroke:none" />
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text10324"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect10326);fill:#000000;fill-opacity:1;stroke:none" />
+    <rect
+       style="mix-blend-mode:normal;fill:#ff4949;fill-opacity:1;stroke:none;stroke-width:4.68638;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.488672"
+       id="rect935"
+       width="68.215126"
+       height="65.467964"
+       x="-39.380856"
+       y="70.589729"
+       transform="matrix(1,0,0.68501951,0.72852472,0,0)"
+       inkscape:export-filename="/home/abris/Documents/point_plane.png"
+       inkscape:export-xdpi="134.377"
+       inkscape:export-ydpi="134.377" />
+    <rect
+       style="opacity:0.409375;mix-blend-mode:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:4.68638;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.488672;filter:url(#filter3629)"
+       id="rect3429"
+       width="68.215126"
+       height="65.467964"
+       x="-25.799019"
+       y="60.980774"
+       transform="matrix(0.87935074,0,0.60237241,0.62524225,-0.20460931,14.113244)"
+       inkscape:export-filename="/home/abris/Documents/point_plane.png"
+       inkscape:export-xdpi="134.377"
+       inkscape:export-ydpi="134.377" />
+    <rect
+       style="mix-blend-mode:normal;fill:#ff8d29;fill-opacity:1;stroke:none;stroke-width:4.68638;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.488672"
+       id="rect935-6"
+       width="68.215126"
+       height="65.467964"
+       x="-25.799019"
+       y="60.980766"
+       transform="matrix(1,0,0.68501951,0.72852472,0,0)"
+       inkscape:export-filename="/home/abris/Documents/point_plane.png"
+       inkscape:export-xdpi="134.377"
+       inkscape:export-ydpi="134.377" />
+    <g
+       id="g5382"
+       transform="translate(2.3263242,-5.1175526)"
+       inkscape:export-filename="/home/abris/Documents/point_plane.png"
+       inkscape:export-xdpi="134.377"
+       inkscape:export-ydpi="134.377">
+      <circle
+         style="opacity:0.559403;fill:#000000;fill-opacity:1;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.488672;filter:url(#filter4343)"
+         id="circle4269"
+         cx="70.406845"
+         cy="72.373421"
+         r="9.5722837"
+         transform="matrix(0.86277967,0,0,0.88847282,7.5967653,9.8901466)" />
+      <circle
+         style="fill:#ffcd38;fill-opacity:1;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.488672"
+         id="path3271"
+         cx="70.406845"
+         cy="72.373421"
+         r="9.5722837" />
+    </g>
+  </g>
+</svg>

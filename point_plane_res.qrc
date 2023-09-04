@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="logo">
+    <file>point_plane.svg</file>
+  </qresource>
+  <qresource prefix="info">
+    <file>info_icon_orange.svg</file>
+    <file>info_icon.svg</file>
+  </qresource>
+</RCC>

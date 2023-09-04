@@ -1,0 +1,61 @@
+<schemalist>
+    <schema id="com.libertyzero.gnome-encfs-manager" path="/com/libertyzero/gnome-encfs-manager/">
+        <key name="stashes" type="a(ssbbbbbibsbs)">
+            <default>[]</default>
+            <summary>Configured stashes</summary>
+            <description></description>
+        </key>
+        <key name="encfs-config-files" type="as">
+            <default>['.encfs6.xml','encfs6.xml','.encfs6 (gdocs).xml','.encfs5']</default>
+            <summary>Encfs config files that are recognized by the import dialog</summary>
+        </key>
+        <key name="show-trayicon" type="b">
+            <default>true</default>
+            <summary>Show trayicon</summary>
+        </key>
+        <key name="show-stash-groups" type="b">
+            <default>false</default>
+            <summary>Show stash groups</summary>
+        </key>
+        <key name="tray-stash-groups" type="b">
+            <default>true</default>
+            <summary>Organize tray in stash groups</summary>
+        </key>
+        <key name="start-minimized" type="b">
+            <default>true</default>
+            <summary>Start minimized to trayicon</summary>
+        </key>
+        <key name="unmount-on-logout" type="b">
+            <default>true</default>
+            <summary>Unmount all stashes on logout</summary>
+        </key>
+        <key name="last-version" type="s">
+            <default>''</default>
+            <summary>Last used version of GEncfsM</summary>
+        </key>
+        <key name="width" type="i">
+            <default>700</default>
+            <summary></summary>
+        </key>
+        <key name="height" type="i">
+            <default>350</default>
+            <summary></summary>
+        </key>
+        <key name="mount-dir-base" type="s">
+            <default>'$HOME/Encfs'</default>
+            <summary></summary>
+        </key>
+        <key name="advanced-options" type="s">
+            <default>''</default>
+            <summary></summary>
+        </key>
+        <key name="stash-groups" type="as">
+            <default>[]</default>
+            <summary></summary>
+        </key>
+        <key name="force-traysystem" type="s">
+            <default>''</default>
+            <summary>Set this to "appindicator" or "classic", or leave this empty to use the default behaviour.</summary>
+        </key>
+    </schema>
+</schemalist>
