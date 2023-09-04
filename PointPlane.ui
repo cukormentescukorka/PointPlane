@@ -4775,7 +4775,7 @@
  </widget>
  <resources>
   <include location="point_plane_res.qrc"/>
-  <include location="../../../.designer/backup/point_plane_res.qrc"/>
+  <include location="point_plane_res.qrc"/>
  </resources>
  <connections>
   <connection>

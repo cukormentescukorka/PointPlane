@@ -21,7 +21,10 @@ import sys
 import webbrowser
 from PIL import Image
 from PyQt5.QtCore import QObject, QThread, pyqtSignal
-# Define Worker and Controller classes here...
+
+
+import os
+import subprocess
 
 
 import threading
@@ -44,6 +47,14 @@ from PyQt5.uic import loadUi
 
 
     
+
+
+
+
+
+
+
+
 
 
 
@@ -190,8 +201,8 @@ class Worker(QObject):
         
         ui.progressBar.setValue(0)
 
-        if not os.path.exists(pag):
-            os.mkdir(pag)
+        if not os.path.exists(page.title):
+            os.mkdir(page.title)
 
 
 
@@ -270,7 +281,7 @@ class Worker(QObject):
 
             ui.progressBar.setValue(int((100 / len(page.images)) * page.images.index(url)))
 
-            pc = downloadimages(url, pag)
+            pc = downloadimages(url, page.title)
 
             if pc != "403":
                 dwlimages.append(pc)
@@ -340,7 +351,7 @@ class Worker(QObject):
                         print(i.lower().replace('_', '').replace(" ", ""))
                         print(im.lower().replace('_', '').replace(" ", ""))
 
-                        image = downloadimages(im, pag)
+                        image = downloadimages(im, page.title)
                     else:
                         image = "403"
 
@@ -378,6 +389,8 @@ class Worker(QObject):
 
         prs.save(f'{str(page.title)}.pptx')
 
+        
+
         print("saved")
 
 
@@ -386,13 +399,44 @@ class Worker(QObject):
         self.finished.emit()
 
 
+
+
+
 class Window(QMainWindow, Ui_mainWindow):
+
+
+    def open_dir(self, dir_path, fold):
+
+        try:
+            subprocess.run(["open", dir_path], check=True)  # On macOS
+        except FileNotFoundError:
+            try:
+                subprocess.run(["xdg-open", dir_path], check=True)  # On Linux
+            except FileNotFoundError:
+                try:
+                    subprocess.run(["start", dir_path], check=True, shell=True)  # On Windows
+                except FileNotFoundError:
+                    print("Unable to open the file. Please check the file path or your operating system.")
+
+
+        if sys.platform=='win32':
+            subprocess.Popen(['start', os.path.join(os.getcwd(), fold)], shell= True)
+
+        elif sys.platform=='darwin':
+            subprocess.Popen(['open', os.path.join(os.getcwd(), fold)])
+
+        else:
+            try:
+                subprocess.Popen(['xdg-open', os.path.join(os.getcwd(), fold)])
+            except OSError:
+                print("Your crappy os is not fully supported")
 
 
     
 
 
     def startG(self):
+
 
         if len(self.titleInput.text()) > 0:
 
@@ -422,6 +466,8 @@ class Window(QMainWindow, Ui_mainWindow):
             # Step 5: Connect signals and slots
             self.thread.started.connect(lambda: self.worker.gen_slides(self.titleInput.text(), self.setLang.currentText(), self))
 
+
+
             self.worker.finished.connect(self.thread.quit)
             self.worker.finished.connect(self.worker.deleteLater)
             self.thread.finished.connect(self.thread.deleteLater)
@@ -430,18 +476,22 @@ class Window(QMainWindow, Ui_mainWindow):
             self.thread.start()
 
             # Final resets
-            self.thread.finished.connect(lambda: self.reset())
+            self.thread.finished.connect(lambda: self.reset(wikipedia.page(self.titleInput.text(), auto_suggest=False).title))
 
 
         else:
             print("No Input")
 
 
-    def reset(self):
+    def reset(self, about):
 
         self.startBtn.setEnabled(True)
 
         self.startBtn.setText("START")
+
+        
+
+        
 
 
         self.fog0.show()
@@ -453,10 +503,12 @@ class Window(QMainWindow, Ui_mainWindow):
         self.fog4.show()
 
         self.fog5.show()
-        self.fog5.setText("Successfully generated ppt")
+        self.fog5.setText(f"Successfully generated ppt. You can use the images in the folder called {about}. You can manually add them into the presentation.")
 
         self.okBtn.show()
         self.okBtn.setText("OK")
+
+        self.open_dir(f'{str(about)}.pptx', about)
 
 
     def __init__(self, parent=None):
